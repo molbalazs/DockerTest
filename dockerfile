@@ -11,7 +11,7 @@ RUN chmod 600 /root/.ssh/id_rsa
 RUN echo "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 
 # Skip Host verification for gitLab
-RUN echo "Host gitClonelab.channel4.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+RUN echo "Host gitlab.channel4.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 
 # Install git
 RUN apt-get update && \
