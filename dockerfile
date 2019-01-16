@@ -23,4 +23,5 @@ maven
 # Copy app
 ADD app.sh /app/app.sh
 # Run the app on container run
-CMD ["bash", "/app/app.sh"]
+ENTRYPOINT ["/app/app.sh"]
+CMD ["all"]
