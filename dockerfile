@@ -14,6 +14,9 @@ RUN chmod 600 /root/.ssh/id_rsa
 # Skip Host verification for github
 RUN echo "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 
+# Skip Host verification for gitLab
+RUN echo "Host gitlab.channel4.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+
 # Prepare installation of Oracle Java 8
 ENV JAVA_VER 8
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/
