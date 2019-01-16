@@ -1,6 +1,8 @@
 # Download base image ubuntu 18.04 (bionic)
 FROM ubuntu:bionic
 
+MAINTAINER Gyorgy Molnar, Balazs Molnar
+
 # Install git
 RUN apt-get update && \
 apt-get install -y git wget
