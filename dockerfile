@@ -37,6 +37,7 @@ RUN apt-get install -y maven
 # ENV MAVEN_HOME /opt/maven
 
 #  git repository
+ARG PLATFROM=all
 RUN git clone git@gitlab.channel4.com:bigscreen/ConnectedTVApplication.git && \
 cd ConnectedTVApplication && \
-mvn package
+mvn package -pl $PLATFORM
