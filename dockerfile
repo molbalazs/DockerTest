@@ -16,7 +16,7 @@ RUN echo "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 
 # Prepare installation of Oracle Java 8
 ENV JAVA_VER 8
-ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/jre
+ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/
 
 # Install Java 8
 RUN apt-get install -y openjdk-8-jdk
