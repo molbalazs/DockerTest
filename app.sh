@@ -10,4 +10,6 @@ mvn package -pl $1
 fi
 
 #Copy the whole repository into the mounted folder
-cp -r ../ConnectedTVApplication /VMSHARED
+foldername=$(git log -1 --format=%cd --date=format:%F_%H:%M)
+mkdir -p /VMSHARED/"$foldername"
+cp -r ../ConnectedTVApplication /VMSHARED/"$foldername"
