@@ -21,10 +21,6 @@ ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/
 # Install Java 8
 RUN apt-get install -y openjdk-8-jdk
 
-# Set Oracle Java as the default Java
-# RUN update-java-alternatives -s java-8-oracle
-# RUN echo "export JAVA_HOME=/usr/lib/jvm/java-8-oracle" >> ~/.bashrc
-
 # Install maven 3.3.9
 RUN wget --no-verbose -O /tmp/apache-maven-3.3.9-bin.tar.gz http://www-eu.apache.org/dist/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz && \
 tar xzf /tmp/apache-maven-3.3.9-bin.tar.gz -C /opt/ && \
