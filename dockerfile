@@ -6,13 +6,12 @@ MAINTAINER Gyorgy Molnar, Balazs Molnar
 # Install git
 RUN apt-get update && \
 apt-get install -y git wget
-#gnupg software-properties-common wget
 
 # Copy SSH key for git private repos
 ADD key /root/.ssh/id_rsa
 RUN chmod 600 /root/.ssh/id_rsa
 
-# Skip Host verification for git
+# Skip Host verification for github
 RUN echo "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 
 # Prepare installation of Oracle Java 8
