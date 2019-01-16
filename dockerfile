@@ -15,7 +15,7 @@ RUN chmod 600 /root/.ssh/id_rsa
 RUN echo "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 
 # Skip Host verification for gitLab
-RUN echo "Host gitlab.channel4.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+RUN echo "Host gitClonelab.channel4.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 
 # Prepare installation of Oracle Java 8
 ENV JAVA_VER 8
@@ -32,5 +32,10 @@ ln -s /opt/maven/bin/mvn /usr/local/bin && \
 rm -f /tmp/apache-maven-3.3.9-bin.tar.gz
 
 ENV MAVEN_HOME /opt/maven
+
+#  git repository
+RUN git clone git@gitlab.channel4.com:bigscreen/ConnectedTVApplication.git && \
+cd ConnectedTVApplication && \
+mvn package
 
 EXPOSE 80 443
