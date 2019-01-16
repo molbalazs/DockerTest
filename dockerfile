@@ -22,7 +22,7 @@ ENV JAVA_VER 8
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/
 
 # Install Java 8
-RUN apt-get install -y openjdk-8-jdk
+RUN apt-get install -y openjdk-8-jre-headless
 
 # Install maven 3.3.9
 RUN wget -O /tmp/apache-maven-3.3.9-bin.tar.gz http://www-eu.apache.org/dist/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz && \
