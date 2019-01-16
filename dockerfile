@@ -20,8 +20,7 @@ git \
 openjdk-8-jre-headless \
 maven
 
-#  git repository
-ARG PLATFROM=all
-RUN git clone git@gitlab.channel4.com:bigscreen/ConnectedTVApplication.git && \
-cd ConnectedTVApplication && \
-mvn package -pl $PLATFORM
+# Copy app
+ADD app.sh /app/app.sh
+# Run the app on container run
+CMD ["bash", "/app/app.sh"]
