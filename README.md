@@ -12,23 +12,23 @@ Ubuntu 18.04, Apache Maven 3.3.9, OpenJDK 8, git - proof of concept
 Now you are ready to run this image with the following commands:
 
 # Run for all platforms
-docker run -tiv ~/SHARED:/VMSHARED maven
+`docker run -tiv ~/SHARED:/VMSHARED maven` Where `~/SHARED` should match the shared folder's path on your host (defined in 2.)
 
 # Run for one platform
-docker run -tiv ~/SHARED:/VMSHARED maven amazonfire
+`docker run -tiv ~/SHARED:/VMSHARED maven amazonfire` Where `~/SHARED` should match the shared folder's path on your host (defined in 2.)
 
 ## Possible platforms
-ps3
-freesat
-samsung/dev-app
-samsung/test-app    
-samsung/stage-app
-samsung/prod-app
-samsung/tizen-int-app
-samsung/tizen-test-app
-samsung/tizen-stage-app
-samsung/tizen-prod-app
-samsung/web-app
-fvc
-yvweb
-amazonfire   
+    ps3
+    freesat
+    samsung/dev-app
+    samsung/test-app    
+    samsung/stage-app
+    samsung/prod-app
+    samsung/tizen-int-app
+    samsung/tizen-test-app
+    samsung/tizen-stage-app
+    samsung/tizen-prod-app
+    samsung/web-app
+    fvc
+    yvweb
+    amazonfire   
