@@ -9,7 +9,9 @@ else
 mvn package -pl $1
 fi
 
-#Copy the whole repository into the mounted folder
+#Create a shared folder with the timestamp of the last commit as a name
 foldername=$(git log -1 --format=%cd --date=format:%F_%H:%M)
 mkdir -p /VMSHARED/"$foldername"
-cp -r ../ConnectedTVApplication /VMSHARED/"$foldername"
+
+#Copy all zip files into shared folder
+find . -name \*.zip -exec cp {} /VMSHARED/"$foldername" \;
