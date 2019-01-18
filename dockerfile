@@ -25,5 +25,8 @@ npm
 # Copy app
 ADD app.sh /app/app.sh
 # Run the app on container run
-ENTRYPOINT ["bash","/app/app.sh"]
-CMD ["all"]
+# ENTRYPOINT ["bash","/app/app.sh"]
+# CMD ["all"]
+
+# RUN DEBUG WITH `docker run -tiv ~/SHARED:/VMSHARED maven bash`
+CMD ["bash", "/app/app.sh"]
