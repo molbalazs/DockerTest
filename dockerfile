@@ -18,7 +18,9 @@ ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/
 RUN apt-get update && apt-get install -y \
 git \
 openjdk-8-jre-headless \
-maven
+maven \
+nodejs \
+npm
 
 # Copy app
 ADD app.sh /app/app.sh

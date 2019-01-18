@@ -1,5 +1,9 @@
 #!/bin/sh
 git clone "git@gitlab.channel4.com:bigscreen/ConnectedTVApplication.git" && cd "ConnectedTVApplication";
+git checkout -q dev/misc/babel
+npm install
+npm run babel
+
 if [ $1 = "all" ]
 then
 #Run maven script for all platforms
