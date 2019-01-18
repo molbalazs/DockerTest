@@ -28,5 +28,5 @@ ADD app.sh /app/app.sh
 # ENTRYPOINT ["bash","/app/app.sh"]
 # CMD ["all"]
 
-# RUN DEBUG WITH `docker run -tiv ~/SHARED:/VMSHARED maven bash`
+# RUN DEBUG WITH `docker run -ti maven bash`
 CMD ["bash", "/app/app.sh"]
