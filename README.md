@@ -37,4 +37,4 @@ Now you are ready to run this image with the following commands:
 Run the following command: `docker save --output ~/GIT/dockerimage.tar maven` Where `~/GIT/dockerimage.tar` is the path to save the image.
 
 # Importing an image
-Run the following command: `docker load dockerimg.tar` Where `dockerimg.tar` is the path of the docker image.
+Run the following command: `docker load -i dockerimg.tar` Where `dockerimg.tar` is the path of the docker image.
