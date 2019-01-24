@@ -14,7 +14,7 @@ mvn package -pl $1
 fi
 
 #Create a shared folder with the timestamp of the last commit as a name
-foldername=$(git log -1 --format=%cd --date=format:%F_%H:%M)
+foldername=$(git log -1 --pretty=format:"%h")
 mkdir -p /VMSHARED/"$foldername"
 
 #Copy all zip files into shared folder
