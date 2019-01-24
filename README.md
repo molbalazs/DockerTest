@@ -34,7 +34,7 @@ Now you are ready to run this image with the following commands:
     amazonfire   
 
 # Exporting the built image
-Run the following command: `docker save --output ~/GIT/dockerimage.tar maven` Where `~/GIT/dockerimage.tar` is the path to save the image.
+Run the following command: `docker save --output ~/dockerimage.tar maven` Where `~/dockerimage.tar` is the path to save the image.
 
 # Importing an image
-Run the following command: `docker load -i dockerimg.tar` Where `dockerimg.tar` is the path of the docker image.
+Run the following command: `docker load -i dockerimage.tar` Where `dockerimage.tar` is the path of the docker image.
