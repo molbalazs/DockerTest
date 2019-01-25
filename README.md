@@ -1,6 +1,11 @@
 # DockerTest
 Ubuntu 18.04, Apache Maven 3.3.9, OpenJDK 8, git - proof of concept
 
+# Prerequisites
+
+## Windows 10
+Connecting to the C4 VPN can problematic. After some investigation it was found that Pulse Secure provides a VPN connection that can be shared with Docker images
+
 # Steps to run:
 1. Download docker environment (https://www.docker.com/get-started)
 2. Set up a shared folder on your host machine (this is where the VM will put the output files)
